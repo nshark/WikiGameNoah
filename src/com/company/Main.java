@@ -172,13 +172,13 @@ public class Main implements ActionListener {
         if (e.getActionCommand().equals("SB")){
             ArrayList<String> path = null;
             int i = 1;
-            while(path == null && (i != 5 && !m.getText().equals("No Path Found in reasonable time(depth 4) \n Run Again to override depth limit"))){
+            while(path == null && (i != 7 && !m.getText().equals("No Path Found in reasonable time(depth 6) \n Run Again to override depth limit"))){
                 f = new HashSet<>();
                 path = bestWikiGame(TextAreaLink.getText(), TextAreaEndLink.getText(), i);
                 i++;
             }
             if (path == null){
-                m.setText("No Path Found in reasonable time(depth 4) \n Run Again to override depth limit");
+                m.setText("No Path Found in reasonable time(depth 6) \n Run Again to override depth limit");
             }
             else{
                 m.setText(Arrays.toString(path.toArray()));
@@ -187,13 +187,13 @@ public class Main implements ActionListener {
         else{
             ArrayList<String> path = null;
             int i = 1;
-            while(path == null && (i != 3 && !m.getText().equals("No Path Found in reasonable time(depth 4) \n Run Again to override depth limit"))){
+            while(path == null && (i != 4 && !m.getText().equals("No Path Found in reasonable time(depth 3) \n Run Again to override depth limit"))){
                 f = new HashSet<>();
                 path = wikiGame(TextAreaLink.getText(), TextAreaEndLink.getText(), i);
                 i++;
             }
             if (path == null){
-                m.setText("No Path Found in reasonable time(depth 2) \n Run Again to override depth limit");
+                m.setText("No Path Found in reasonable time(depth 3) \n Run Again to override depth limit");
             }
             else{
                 m.setText(Arrays.toString(path.toArray()));
